@@ -95,7 +95,7 @@ function App() {
     if(PartID ===""){
       alert("ERROR: please fill out all text inputs")
     }else{
-    Axios.post('http://localhost:3001/create',{
+    Axios.post('https://inventory-server.herokuapp.com/create',{
       PartID:PartID,
       MountingType:MountingType,
       Manufacturer:Manufacturer,
@@ -110,7 +110,7 @@ function App() {
     }
   };
   const getParts = () =>{
-    Axios.get('http://localhost:3001/parts').then((response) =>{
+    Axios.get('https://inventory-server.herokuapp.com/parts').then((response) =>{
         
         setPartList(response.data);
         setRows(response.data);
@@ -121,7 +121,7 @@ function App() {
     if(Id === 0){
       console.log("stoped empty delete")
     }else{
-      Axios.delete('http://localhost:3001/delete/'+ Id).then(()=>{
+      Axios.delete('https://inventory-server.herokuapp.com/delete/'+ Id).then(()=>{
         console.log("success");
         deletefilter(Id);
       });
