@@ -1,1 +1,1 @@
-#/api/parts/* https://inventory-server.herokuapp.com/api/parts:splat 200!
+/api/parts/* https://inventory-server.herokuapp.com/api/parts:splat 200!
