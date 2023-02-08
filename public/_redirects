@@ -1,1 +1,1 @@
-/api/* https://debaratishop.herokuapp.com/:splat 200!
+/api/* https://inventory-server.herokuapp.com/:splat 200!
