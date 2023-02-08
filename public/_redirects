@@ -1,1 +1,5 @@
 /api/parts/* https://inventory-server.herokuapp.com/api/parts:splat 200!
+
+/api/create/* https://inventory-server.herokuapp.com/api/create:splat 200!
+
+/api/delete/:id* https://inventory-server.herokuapp.com/api/delete/:id:splat 200!
