@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+:root{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+  background-color: #500000;
+}
+.header img{
+  float:right;
+  padding: 12px;
+
+}
+.header title{
+  
+  display: inline-block;
+  margin-top: 12px;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+h1{
+  background-color: #500000;
+  color: white;
+  padding: 1%;
+}
+
+body{
+  background-color:rgb(240, 227, 207);
+}
+
+.dash_button{
+  display: inline-block;
+  margin: 10px auto; 
+}
+
+#inventory{
+  border-collapse: collapse;
+  border-radius:10px;
+  width: 100%;
+  padding-top: 10px;
+  margin-top: 30px
+}
+#inventory td, #inventory th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#inventory tr:nth-child(even){background-color: #f2f2f2;}
+#inventory tr:nth-child(odd){background-color: #ffffff;}
+#inventory tr:hover {background-color: #ddd;}
+
+#inventory th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #500000;
+  color:white;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #500000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #500000;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+.bins{
+  margin-top:4px;
+  padding:8px;
+}
+.bins btn{
+  border-radius:10px;
+  background-color: #500000;
+  color:white;
+  padding:24px;
+  text-align:center;
+  font-size: 16px;
+  margin:5px;
+ 
+  transition: 0.3s;
+}
+.bins btn:hover{opacity:0.7; }
+
+.button{
+  transition-duration: 0.4;
+  border-radius: 8px;
+  font-size: 16px;
+  display:inline-block;
+  padding: 24px;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  margin-right:4px;
+  background-color: #500000;
+  color:white;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: white;
+  color:black;
+}
+
+.addpart{
+  padding-top: 4px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border:2px solid #500000;
+  background-color: white;
+  
+}
+
+input[type=text]{
+  border: 2px solid #500000;
+
+}
+input[type=number]{
+
+  border: 2px solid #500000;
+  margin-right: 4px;
+}
