@@ -21,6 +21,7 @@ function App() {
   const[Price, setPrice]= useState("");
   const[Vendor, setVendor]= useState("");
   const[ProductClass, setProduct]= useState("");
+  const[VendorPartID, setVendorPartID]= useState("");
   const[BinAssignment, setBin]= useState("");
   //Table list
   const[partList, setPartList] =useState([]);
@@ -36,6 +37,7 @@ function App() {
     {title:"Price",field:"Price"},
     {title:"Vendor",field:"Vendor"},
     {title:"Product Class",field:"ProductClass"},
+    {title:"Vendor Part ID",field:"VendorPartID"},
     {title:"Bin ssignment",field:"BinAssignment"},
   ]
 
@@ -102,6 +104,7 @@ function App() {
       Price:Price,
       Vendor:Vendor,
       ProductClass:ProductClass,
+      VendorPartID:VendorPartID,
       BinAssignment:BinAssignment
     }).then(()=>{
         console.log("success");
@@ -180,6 +183,12 @@ function App() {
         type="text"
         onChange={(event)=>{
          setProduct(event.target.value);
+        }} />
+        <label> Vendor Part ID: </label>
+        <input
+        type="text"
+        onChange={(event)=>{
+         setVendorPartID(event.target.value);
         }} />
 
         <label> Bin Assignment: </label>
@@ -267,6 +276,7 @@ function App() {
                   <TableCell>Price</TableCell>
                   <TableCell>Vendor</TableCell>
                   <TableCell>Product Class</TableCell>
+                  <TableCell>Vendor Part ID</TableCell>
                   <TableCell>Bin Assignment</TableCell>
                   <TableCell> <DeleteIcon></DeleteIcon></TableCell>
                 </TableRow>
@@ -286,6 +296,7 @@ function App() {
                       <TableCell>{row.Price}</TableCell>
                       <TableCell>{row.Vendor}</TableCell>
                       <TableCell>{row.ProductClass}</TableCell>
+                      <TableCell>{row.VendorPartID}</TableCell>
                       <TableCell>{row.BinAssignment}</TableCell>
                       <TableCell>
                         <IconButton onClick={()=> deletePart(row.ID)}>
