@@ -2,4 +2,4 @@
 
 /api/create/* https://inventory-server.herokuapp.com/api/create:splat 200!
 
-/api/delete/ id=:id https://inventory-server.herokuapp.com/api/delete/:id 200!
+/api/delete/* id=:id https://inventory-server.herokuapp.com/api/delete/:id/:splat 200!
