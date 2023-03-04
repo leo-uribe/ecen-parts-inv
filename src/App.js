@@ -72,7 +72,7 @@ function App() {
   };
 
   const BinSearch = (searchedVal) => {
-    const filteredRows = rows.filter((row) => {
+    const filteredRows = partList.filter((row) => {
       //console.log(row.BinAssignment)
       return (row.BinAssignment === (searchedVal));
     });
@@ -96,7 +96,11 @@ function App() {
   const addPart =() =>{
     if(PartID ===""){
       alert("ERROR: please fill out all text inputs")
-    }else{
+    }else if(BinAssignment >7){
+      alert("ERROR: please enter a bin number from 1 to 7")
+    }
+    
+    else{
     Axios.post('/api/create',{
       PartID:PartID,
       MountingType:MountingType,
@@ -209,6 +213,8 @@ function App() {
           <label> Bin Assignment: </label>
             <input
             type="number"
+            min="1"
+            max="7"
             onChange={(event)=>{
             setBin(event.target.value);
           }} />
