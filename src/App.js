@@ -142,63 +142,83 @@ function App() {
 
       <h2>Manually Add Part</h2>
       <div className='addpart'>
-        <label> PartID: </label>
-        <input 
-         type="text"
-         onChange={(event)=>{
-          setPartID(event.target.value);
-         }} />
+        <section>
+          <div className= 'addinputs'>
+            <label> PartID: </label>
+            <input 
+            type="text"
+            onChange={(event)=>{
+              setPartID(event.target.value);
+            }} />
+          </div>
+          
+          <div className= 'addinputs'>
+            <label> MountingType: </label>
+            <input 
+            type="text"
+            onChange={(event)=>{
+            setMount(event.target.value);
+            }} 
+            />
+          </div>
+          <div className= 'addinputs'>
+            <label> Manufacturer: </label>
+            <input
+            type="text"
+            onChange={(event)=>{
+            setManufacturer(event.target.value);
+            }} />
+          </div>
 
-        <label> MountingType: </label>
-        <input 
-        type="text"
-        onChange={(event)=>{
-         setMount(event.target.value);
-        }} 
-        />
-
-        <label> Manufacturer: </label>
-        <input
-        type="text"
-        onChange={(event)=>{
-         setManufacturer(event.target.value);
-        }} />
-
-        <label> Price: </label>
-        <input
-        type="text"
-        onChange={(event)=>{
-         setPrice(event.target.value);
-        }} />
-
-        <label> Vendor: </label>
-        <input
-        type="text"
-        onChange={(event)=>{
-         setVendor(event.target.value);
-        }} />
-
-        <label> Product Class: </label>
-        <input
-        type="text"
-        onChange={(event)=>{
-         setProduct(event.target.value);
-        }} />
-        <label> Vendor Part ID: </label>
-        <input
-        type="text"
-        onChange={(event)=>{
-         setVendorPartID(event.target.value);
-        }} />
-
-        <label> Bin Assignment: </label>
+          <div className= 'addinputs'>
+            <label> Price: </label>
+            <input
+            type="text"
+            onChange={(event)=>{
+            setPrice(event.target.value);
+            }} />
+          </div>
+          <div className= 'addinputs'>
+          <label> Vendor: </label>
           <input
-          type="number"
+          type="text"
           onChange={(event)=>{
-          setBin(event.target.value);
-        }} />
+          setVendor(event.target.value);
+          }} />
+          </div>
 
-        <button className='button' onClick={addPart}> Add Part</button>
+          <div className= 'addinputs'>
+            <label> Product Class: </label>
+            <input
+            type="text"
+            onChange={(event)=>{
+            setProduct(event.target.value);
+            }} />
+          </div>
+
+          <div className= 'addinputs'>
+            <label> Vendor Part ID: </label>
+            <input
+            type="text"
+            onChange={(event)=>{
+            setVendorPartID(event.target.value);
+            }} />
+          </div>
+
+          <div className= 'addinputs'>
+          <label> Bin Assignment: </label>
+            <input
+            type="number"
+            onChange={(event)=>{
+            setBin(event.target.value);
+          }} />
+          </div>
+          <div className= 'addinputs'>
+        <button className='add_button' onClick={addPart}> Add Part</button>
+        </div>
+        </section>
+
+      
       </div>
         <h2>Sort Table by Bin </h2>
       <div className="bins">
@@ -209,7 +229,6 @@ function App() {
       <button class='button' onClick={() => BinSearch(5)}>Bin 5</button>
       <button class='button' onClick={() => BinSearch(6)}>Bin 6</button>
       <button class='button' onClick={() => BinSearch(7)}>Bin 7</button>
-      <button class='button' onClick={() => BinSearch(8)}>Bin 8</button>
       </div>
 
         <h2>Database Inventory</h2>
@@ -268,7 +287,7 @@ function App() {
             <Table aria-label= 'simple table' >
               <TableHead>
                 <TableRow
-                sx={{backgroundColor:"rgba(85,0,0)","& th":{color:"white"}}}>
+                sx={{backgroundColor:"#074069","& th":{color:"white"}}}>
                   <TableCell>Id</TableCell>
                   <TableCell>Part ID</TableCell>
                   <TableCell>Mounting Type</TableCell>

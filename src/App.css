@@ -5,12 +5,17 @@
   justify-content: space-evenly;
 }
 
+.addinputs{
+  float: left;
+  margin-right: 5px;
+}
+
 :root{
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header{
-  background-color: #500000;
+  background-color: #074069;
 }
 .header img{
   float:right;
@@ -26,13 +31,13 @@
   font-weight: 700;
 }
 h1{
-  background-color: #500000;
+  background-color: #074069;
   color: white;
   padding: 1%;
 }
 
 body{
-  background-color:rgb(240, 227, 207);
+  background-color:rgb(224, 223, 213);
 }
 
 .dash_button{
@@ -59,13 +64,13 @@ body{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #500000;
+  background-color: #074069;
   color:white;
 }
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #500000;
+  background-color: #074069;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -75,7 +80,7 @@ body{
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #500000;
+  background-color: #074069;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -115,7 +120,7 @@ body{
 }
 .bins btn{
   border-radius:10px;
-  background-color: #500000;
+  background-color: #074069;
   color:white;
   padding:24px;
   text-align:center;
@@ -135,7 +140,23 @@ body{
   margin-bottom: 10px;
   margin-top: 4px;
   margin-right:4px;
-  background-color: #500000;
+  background-color: #074069;
+  color:white;
+  cursor: pointer;
+}
+
+input, label{
+  display:block;
+}
+
+
+.add_button{
+  transition-duration: 0.4;
+  border-radius: 8px;
+  font-size: 16px;
+  display:inline-block;
+  padding: 10px;
+  background-color: #074069;
   color:white;
   cursor: pointer;
 }
@@ -146,20 +167,22 @@ body{
 
 .addpart{
   padding-top: 4px;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+
   border-radius: 8px;
-  border:2px solid #500000;
+  border:2px solid #074069;
   background-color: white;
   
 }
 
 input[type=text]{
-  border: 2px solid #500000;
+  border: 2px solid #074069;
 
 }
 input[type=number]{
 
-  border: 2px solid #500000;
+  border: 2px solid #00537a;
   margin-right: 4px;
 }
